@@ -1,8 +1,6 @@
-(new (require('spaceload'))(true, './')).registerFile(require('../package.json').autoload);
-
 var assert = require('assert');
 
-var Routing = USE('Silex.Component.Routing.Routing');
+var Routing = require('../lib/Routing.js');
 
 
 describe('Create routing', function() {

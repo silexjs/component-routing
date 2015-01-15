@@ -1,6 +1,6 @@
 {
 	"name": "silex-component-routing",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "[SILEX][COMPONENT] Route manager that analyzes a HTTP request",
 	"author": "Valentin Allaire <valentin@sitexw.fr>",
 	"license": "MIT",
@@ -14,9 +14,7 @@
 		"component"
 	],
 	"main": "index.js",
-	"dependencies": {
-		"spaceload": "<2.0.0"
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"mocha": "2.x"
 	},
