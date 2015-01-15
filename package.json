@@ -11,7 +11,7 @@
 		"request",
 		"url",
 		"silex",
-		"component",
+		"component"
 	],
 	"main": "index.js",
 	"dependencies": {
