@@ -1,0 +1,39 @@
+{
+	"name": "silex-component-routing",
+	"version": "0.0.1",
+	"description": "[SILEX][COMPONENT] Route manager for routing URLs HTTP server",
+	"author": "Valentin Allaire <valentin@sitexw.fr>",
+	"license": "MIT",
+	"keywords": [
+		"routing",
+		"route",
+		"manager",
+		"url",
+		"silex",
+		"component",
+	],
+	"main": "index.js",
+	"dependencies": {},
+	"devDependencies": {
+		"mocha": "2.x"
+	},
+	"scripts": {
+		"test": "mocha ./test/test.js"
+	},
+	"directories": {
+		"test": "test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/silexjs/component-routing.git"
+	},
+	"bugs": {
+		"url": "https://github.com/silexjs/component-routing/issues"
+	},
+	"homepage": "https://github.com/silexjs/component-routing",
+	"autoload": {
+		"psr-4": {
+			"Silex\\Component\\Routing": "./lib/"
+		}
+	}
+}
