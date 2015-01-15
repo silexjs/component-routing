@@ -1,7 +1,7 @@
-[SILEX][COMPONENT] Routing
+Routing Component
 ========
 
-Route manager for routing URLs HTTP server.
+Route manager that analyzes a HTTP request.
 
 Package owned [Silex](https://www.npmjs.com/package/silex).
 
