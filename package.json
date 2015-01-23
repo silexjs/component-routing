@@ -1,6 +1,6 @@
 {
 	"name": "silex-component-routing",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "[SILEX][COMPONENT] Route manager that analyzes a HTTP request",
 	"author": "Valentin Allaire <valentin@sitexw.fr>",
 	"license": "MIT",
