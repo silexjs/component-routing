@@ -89,38 +89,33 @@ describe('Create routing', function() {
 			{
 				title:		'Home Page - 1',
 				routeName:	'homepage',
-				host:		'sitexw.fr',
 				method:		'GET',
-				path:		'/',
+				url:		'http://sitexw.fr/',
 			},
 			{
 				title:		'Home Page - 2',
 				routeName:	'homepage',
-				host:		'localhost',
 				method:		'POST',
-				path:		'/',
+				url:		'http://localhost/',
 			},
 			{
 				title:		'Home Page - 3',
 				routeName:	null,
-				host:		'sitexw.fr',
 				method:		'DELETE',
-				path:		'/',
+				url:		'http://sitexw.fr/',
 			},
 			//---------------------------------------------------------
 			{
 				title:		'Test A - 1',
 				routeName:	'test_a',
-				host:		'en.sitexw.fr',
 				method:		'GET',
-				path:		'/hello/pol-valentin/dupont/red.html',
+				url:		'http://en.sitexw.fr/hello/pol-valentin/dupont/red.html',
 			},
 			{
 				title:		'Test A - 2',
 				routeName:	'test_a',
-				host:		'sitexw.fr',
 				method:		'GET',
-				path:		'/hello/pol-valentin/dupont.txt',
+				url:		'http://sitexw.fr/hello/pol-valentin/dupont.txt',
 				variables:	{
 								'_local':	'fr',
 								'color':	'red',
@@ -130,17 +125,15 @@ describe('Create routing', function() {
 			{
 				title:		'Test A - 3',
 				routeName:	null,
-				host:		'sitexw.fr',
 				method:		'POST',
-				path:		'/hello/pol-valentin/dupont/red.html',
+				url:		'http://sitexw.fr/hello/pol-valentin/dupont/red.html',
 			},
 			//---------------------------------------------------------
 			{
 				title:		'Test D - 1',
 				routeName:	'test_d',
-				host:		'sitexw.local',
 				method:		'GET',
-				path:		'/prefix/sub-prefix/my/pseudo/is/sitexw',
+				url:		'http://sitexw.local/prefix/sub-prefix/my/pseudo/is/sitexw',
 				variables:	{
 								'pseudo':	'sitexw',
 							},
@@ -149,60 +142,53 @@ describe('Create routing', function() {
 			{
 				title:		'Test E - 1',
 				routeName:	'test_e',
-				host:		'sitexw.local',
 				method:		'DELETE',
-				path:		'/prefix/sub-prefix/simple',
+				url:		'http://sitexw.local/prefix/sub-prefix/simple',
 			},
 			{
 				title:		'Test E - 2',
 				routeName:	null,
-				host:		'sitexw.local',
 				method:		'GET',
-				path:		'/prefix/sub-prefix/simple',
+				url:		'http://sitexw.local/prefix/sub-prefix/simple',
 			},
 			//---------------------------------------------------------
 			{
 				title:		'Test G - 1',
 				routeName:	'test_g',
-				host:		'sitexw.local',
 				method:		'DELETE',
-				path:		'/prefix/prefix-sub/simple',
+				url:		'http://sitexw.local/prefix/prefix-sub/simple',
 			},
 			{
 				title:		'Test G - 2',
 				routeName:	null,
-				host:		'sitexw.local',
 				method:		'GET',
-				path:		'/prefix/prefix-sub/simple',
+				url:		'http://sitexw.local/prefix/prefix-sub/simple',
 			},
 			{
 				title:		'Test G - 3',
 				routeName:	null,
-				host:		'sitexw.fr',
 				method:		'DELETE',
-				path:		'/prefix/prefix-sub/simple',
+				url:		'http://sitexw.fr/prefix/prefix-sub/simple',
 			},
 			//---------------------------------------------------------
 			{
 				title:		'Test I - 1',
 				routeName:	'test_i',
-				host:		'sitexw.local',
 				method:		'GET',
-				path:		'/prefix/prefix-sub/prefix-sub-sub/simple',
+				url:		'http://sitexw.local/prefix/prefix-sub/prefix-sub-sub/simple',
 			},
 			{
 				title:		'Test I - 2',
 				routeName:	null,
-				host:		'sitexw.local',
 				method:		'GET',
-				path:		'/prefix/prefix-sub/prefix-sub-sub/simple2',
+				url:		'http://sitexw.local/prefix/prefix-sub/prefix-sub-sub/simple2',
 			},
 		];
 		for(var i in queries) {
 			var result = null;
 			it(queries[i].title, function() {
-				result = routing.match(queries[i].host, queries[i].method, queries[i].path);
-				assert.equal((result===null?result:result.routeName), queries[i].routeName);
+				result = routing.match(queries[i].method, queries[i].url);
+				assert.equal((result===null?result:result.name), queries[i].routeName);
 			});
 			if(queries[i].variables !== undefined) {
 				it(queries[i].title+' (variables)', function() {
